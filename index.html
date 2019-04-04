@@ -1,28 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+ <script>var e=document.getElementById("name");s.assert.isNotNull(e,'There should be an input text field with id="name" '),s.assert.strictEqual(e.type,"text",'input field with id="name" should be a text field '),s.assert.isOk(e.required,"Name input field should be required "),s.assert.isAbove(document.querySelectorAll("#survey-form #name").length,0,'The field with id="name" is not inside the form element')</script>
+
+ <script>var e=document.getElementById("email");s.assert.isNotNull(e,'There should be an input text field with id="email" '),s.assert.strictEqual(e.type,"text",'input field with id="email" should be a text field '),s.assert.isOk(e.required,"Name input field should be required "),s.assert.isAbove(document.querySelectorAll("#survey-form #email").length,0,'The field with id="email" is not inside the form element')</script>
   <head>
     <meta charset="UTF-8">
-    <title>Deeeemooo</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
- 
+
   <body >
-    <nav id="navbar"></nav>
+      <h1 id="title">Welcome to this survey</h1>
+   
+    <p id="description">Please take our survey free</p>
 
-    <section id="welcome-section">
-      <h1>Welcome to my Portfolio!</h1>      
-    </section>
-
-    <section id="projects">
-      <div class="project-tile">
-        <a href="#">Project Number 1</a>
+      <form id="survey-form">
+      <div>
+          <label id='name-label'>name:</label>
+          <input id="name" required placeholder="Full Name">
+        </div>
+      <div>
+          <label id='email-label'>email :</label>
+          <input id="email" type="email" required placeholder="Email">
       </div>
-    </section>
-      
- 
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
- 
+          <label id='number-label'>Age:</label>
+          <input id="number" type="number" min="1" max="100" placeholder="Age">
+      <div>
+          <label id="dropdown-label">Favorite Language</label>
+          <select id="dropdown">
+            <option></option>
+            <option>JavaScript</option>
+            <option>HTML5</option>
+          </select>
+        </div>
+      <div>
+          <label>YouTube</label><input type="radio" name="resource" value="1">
+          <label>Online Courses</label><input type="radio" value="2" name="resource">
+          <label>Traditional Education</label><input type="radio" value="3" name="resource">
+          <label>Books</label><input type="radio" name="resource" value="4">
+        </div>   
+        <div>
+            <label>YouTube</label><input type="checkbox" name="resource" value="1">
+            <label>Online Courses</label><input type="checkbox" value="2" name="resource">
+            <label>Traditional Education</label><input type="checkbox" value="3" name="resource">
+            <label>Books</label><input type="checkbox" name="resource" value="4">
+          </div>   
+          <label>Suggestions   <textarea></textarea></label>
+          <div><button id="submit">Submit</button></div>
+      </form>
+    
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    
   <script  src="js/index.js"></script>
   </body>
 </html>
